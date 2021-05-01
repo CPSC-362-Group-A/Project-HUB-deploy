@@ -23,11 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'n1qxjrp7fbw0&d6ciwu8733)2alrn#c2x-z0!s3q@0dsyyl^wu'
 
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# Change this 
-ALLOWED_HOSTS = ['.herokuapp.com']
+ALLOWED_HOSTS = ['cpsc362app.herokuapp.com']
 
 
 # Application definition
