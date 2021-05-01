@@ -145,3 +145,5 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = '362groupa@gmail.com'
 EMAIL_HOST_PASSWORD = 'Velasco1'
+
+RAZZLE_PUBLIC_DIR = os.path.join(BASE_DIR,'cal_home')
