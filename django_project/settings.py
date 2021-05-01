@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -147,3 +148,5 @@ EMAIL_HOST_USER = '362groupa@gmail.com'
 EMAIL_HOST_PASSWORD = 'Velasco1'
 
 RAZZLE_PUBLIC_DIR = os.path.join(BASE_DIR,'cal_home')
+
+django_heroku.settings(locals())
