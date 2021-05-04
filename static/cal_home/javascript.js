@@ -26,7 +26,7 @@ var quotes = [
     getInput = "<p>" + getInput + "</p>";
     localStorage.setItem("setQuoteForm",getInput);
     localStorage.setItem("setQuote",getInput);
- }
+  }
 
   function addQuotes() {
     var boxvalue = document.getElementById('quote').innerHTML;
@@ -42,7 +42,7 @@ var quotes = [
       console.log(quotes);
             document.getElementById('quoteDisplay').innerHTML = "<p>" + boxvalue + "</p>";
     }
-  
+  }
   
   function useQuote() {
        var quote = localStorage.getItem("setQuote");
@@ -68,4 +68,5 @@ var quotes = [
 
   function closeForm() {
     document.getElementById("CustomQuote").style.display = "none";
+  }
   }
