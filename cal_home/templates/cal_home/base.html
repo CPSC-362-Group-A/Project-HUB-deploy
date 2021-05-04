@@ -28,14 +28,16 @@
     <a href="#Tasks">Tasks</a>
     <a href="#Music">Music</a>
     <a href="#Settings">Settings</a>
-    <button style="float:none" class="quotebtn" onclick="openForm();">Custom Quote</button>
+   
     
-    
+        <button style="float:none" class="quotebtn" onclick="openForm();">Custom Quote</button>
     <div style="float:none" id ="quoteDisplay" class = "quoteDisplay"><p><al>Click the button for a quote.</al></p></div>
     <!-- Implement procedure to log out, maybe add a confirmation window/message before logging out?-->
     <a style="float:right" class="logout" href={% url 'cal_landing' %}>Log Out</a>
 
   </div>
+
+
   <form class = "form-popup" id ="CustomQuote" onsubmit="addQuotes();">
     <form action="/action_page.php" class="form-container">
     <p>Got a quote in your head? Type it in to use it here!</p>
@@ -46,15 +48,23 @@
     <button type="button" class="btnm" onclick="closeForm()">Close</button>
       </form>
 </form>
+      
 
     <div class ="main-container">
         {% block content %}
-
+          
         {% endblock %}
+       
     </div>
 
 
     <script type="text/javascript" src="{% static 'cal_home/javascript.js' %}"></script>
+    <script type="text/javascript">
+      function useBgColor() {
+        var x = localStorage.getItem("bgcolor");
+        
+        document.getElementById("CalenTable").style.backgroundColor = x.value;
+   }</script>
     
 </body>
 

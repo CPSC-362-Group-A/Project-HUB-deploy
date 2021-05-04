@@ -26,14 +26,14 @@ var quotes = [
     getInput = "<p>" + getInput + "</p>";
     localStorage.setItem("setQuoteForm",getInput);
     localStorage.setItem("setQuote",getInput);
-  }
+ }
 
   function addQuotes() {
     var boxvalue = document.getElementById('quote').innerHTML;
-
+    
     if (boxvalue == null)
     {
-
+        
             document.getElementById('quoteDisplay').innerHTML =  "<p>Click the button for a quote.</p>";
     }
     else
@@ -42,10 +42,12 @@ var quotes = [
       console.log(quotes);
             document.getElementById('quoteDisplay').innerHTML = "<p>" + boxvalue + "</p>";
     }
+  
   }
   
   function useQuote() {
        var quote = localStorage.getItem("setQuote");
+       var quoteForm = localStorage.getItem("setQuoteForm");
   if (quote == null)
   {
       quote = "<p>Click the button for a quote.</p>"
@@ -55,7 +57,8 @@ var quotes = [
   {
           document.getElementById('quoteDisplay').innerHTML = quote;
   }
-  
+  }
+
   function openForm() {
     if(document.getElementById("CustomQuote").style.display == "block")
     {
@@ -65,8 +68,7 @@ var quotes = [
       document.getElementById("CustomQuote").style.display = "block";
     }
   }
-
+  
   function closeForm() {
     document.getElementById("CustomQuote").style.display = "none";
-  }
   }
