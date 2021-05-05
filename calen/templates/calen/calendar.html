@@ -34,8 +34,18 @@
 <script type="text/javascript">
 
     function clickColorBack(){
-        var x = document.getElementById("colorBackground");
-        document.getElementById("CalenTable").style.backgroundColor = x.value;
+        var root = document.documentElement;
+        var x = document.getElementById("colorBackground").value;
+        var tab = document.getElementById("CalenTable");
+        var trs = tab.getElementsByTagName("tr");
+        var tds = tab.getElementsByTagName("td");
+        for(var i = 0, j = trs.length; i < j; ++i){
+            trs[i].style.backgroundColor.innerHTML=x;
+        }
+        for(var i = 0, j = tds.length; i < j; ++i){
+            tds[i].style.backgroundColor.innerHTML=x;
+        }
+        root.style.setProperty("--backcol", x);
     }
 
     
